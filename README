@@ -5,13 +5,13 @@ The goal of the bowling game is to build a tool to score a game of bowling. If y
 http://en.wikipedia.org/wiki/Tenpin#Scoring
 
 
-Once you get your head wrapped around scoring a game of bowling, you will want to check out bowling_spec.rb which contains the specs/tests you will need to make pass.
+Once you get your head wrapped around scoring a game of bowling, you will want to check out bowling_spec.rb which contains the specs/tests.
 
-You will need rspec for this, which can be installed via gems:
+You will need rspec to run the spec, which can be installed via gems:
 
 gem install rspec.
 
-You can run the bowling specs by:
+To run the specs:
 
 spec bowling_spec.rb
 
