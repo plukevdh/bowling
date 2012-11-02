@@ -21,7 +21,7 @@ class LinkedList
       !@next.nil?
     end
 
-    # delegate methods to the data object
+    # delegate method calls to the data object
     def method_missing(method, *args, &block)
       return @value.send(method, *args, &block) if @value.respond_to?(method)
       super
@@ -69,6 +69,7 @@ class LinkedList
     parent.next = node
   end
 
+  # sublist is 1-base indexed, rather than 0
   def sublist(index)
     LinkedList.create_from_nodes @list[0..index-1]
   end

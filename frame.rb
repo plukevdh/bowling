@@ -37,6 +37,7 @@ class Bowling < LinkedList
       frame_total
     end
 
+    # for current frame only, independent of other frames
     def frame_total
       (strike? || second_roll == NotRolled) ? first_roll : first_roll + second_roll
     end
