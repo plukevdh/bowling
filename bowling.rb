@@ -8,12 +8,12 @@ class Bowling < LinkedList
         total = 0
 
         frames.each do |frame|
-          total += if frame.strike?
-            frame.total_pins_hit + next_two_rolls_from(frame)
+          total += frame.total_pins_hit
+
+          if frame.strike?
+            total += next_two_rolls_from(frame)
           elsif frame.spare?
-            frame.total_pins_hit + next_roll_from(frame)
-          else
-            frame.total_pins_hit
+            total += next_roll_from(frame)
           end
         end
 
