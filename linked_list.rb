@@ -56,15 +56,11 @@ class LinkedList
   end
 
   def insert(item)
-    parent = last_node
-    new_node = Node.new(item)
-
-    @list.push new_node
-    parent.next = new_node
+    insert_node Node.new(item)
   end
 
   def insert_node(node)
-    parent = @list.last || ROOT_NODE
+    parent = last_node
     @list.push(node)
     parent.next = node
   end
