@@ -54,8 +54,8 @@ class TestFrame < MiniTest::Unit::TestCase
       @frame.rolled(22)
     end
 
+    @frame.rolled(5)
     assert_raises Bowling::Frame::InvalidRoll do
-      @frame.rolled(5)
       @frame.rolled(6)
     end
   end
