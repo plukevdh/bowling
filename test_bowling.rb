@@ -1,3 +1,6 @@
+require 'minitest/autorun'
+require_relative 'bowling'
+
 class TestBowling < MiniTest::Unit::TestCase
   def setup
     @bowling = Bowling.new
