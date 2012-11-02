@@ -1,5 +1,4 @@
 require 'minitest/autorun'
-
 require_relative 'frame'
 
 class TestFrame < MiniTest::Unit::TestCase
